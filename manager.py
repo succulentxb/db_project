@@ -50,6 +50,10 @@ def equip_page():
 def get_equips():
     return equip.get_equips()
 
+@app.route('/equip/get_record', methods=['POST'])
+def get_record():
+    return equip.get_record()
+
 @app.route('/equip/add_repair_record', methods=['POST'])
 def add_repair_record():
     return equip.add_repair_record()

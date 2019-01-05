@@ -82,3 +82,33 @@ def update_equip_status():
             cursor.execute(sql)
             db.commit()
     db.close()
+
+def get_repair_records():
+    db = pymysql.connect(host, user, password, db_name)
+    cursor = db.cursor()
+    form = flask.request.form
+    start_date = form['start_date']
+    end_date = form['end_date']
+    sql = """
+            SELECT record_id, reporter_id, equip_id, location_code, report_date, repair_status
+            FROM repair_record NATURAL JOIN equipment
+            WHERE report_date>='"""
+    sql += start_date + "' AND report_date<='" + end_date + "'"
+    cursor.execute(sql)
+    record_results = cursor.fetchall()
+    records = []
+    for record_row in record_results:
+        records.append({
+            "record_id": record_row[0],
+            "reporter_id": record_row[1],
+            "equip_id": record_row[2],
+            "location": record_row[3],
+            "report_date": record_row[4],
+            "repair_status": record_row[5]
+        })
+    response = {
+        "status": "success",
+        "content": records
+    }
+    db.close()
+    return flask.jsonify(response)

@@ -36,6 +36,10 @@ $('#submit').click(function() {
     });
 });
 
+$('#query').click(function() {
+    get_records();
+});
+
 function get_equips_info() {
     var url = '/equip/get_equips';
     $.ajax({
@@ -98,4 +102,40 @@ Date.prototype.format = function(fmt) {
         }
     }
    return fmt; 
+}
+
+
+
+
+function get_records() {
+    var month = $('#month-input').val();
+    var start_date = month + '-01';
+    var end_date = month + '-31';
+    $.ajax({
+        url: '/equip/get_record',
+        type: 'post',
+        dataType: 'json',
+        data: {
+            "start_date": start_date,
+            "end_date": end_date
+        },
+        success: function(response) {
+            add_records(response['content']);
+        }
+    });
+}
+
+function add_records(records) {
+    $('#record_tbody').html('');
+    var records_len = records.length;
+    for (var i = 0; i < records_len; i++) {
+        var tr = '<tr>';
+        tr += '<th>' + records[i]['record_id'] + '</th>';
+        tr += '<td>' + records[i]['reporter_id'] + '</td>';
+        tr += '<td>' + records[i]['location'] + '</td>';
+        tr += '<td>' + records[i]['report_date'] + '</td>';
+        tr += '<td>' + (records[i]['complaint_status'] == 1 ? 'Done' : 'Processing') + '</td>';
+        tr += '</tr>';
+        $('#record_tbody').append(tr);
+    }
 }

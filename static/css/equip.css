@@ -25,3 +25,11 @@
 #repair-record-area {
     display: none;
 }
+.query-input {
+    width: 100%;
+    height: 35px;
+    border-radius: 5px;
+    border: solid;
+    border-width: 2px;
+    border-color: grey;
+}

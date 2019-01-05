@@ -77,6 +77,28 @@
 #### response paras
     success: {"status": "success"}
 
+### get repair records
+#### request url
+    /equip/get_record
+#### request paras
+    {"start_time": "2019-01-01", "end_time": "2019-01-31"}
+#### response
+    success: 
+        {
+            "status": "success",
+            "content":
+                [
+                    {
+                        "record_id": 1,
+                        "reporter_id": 1,
+                        "equip_id": 1,
+                        "location": "A-equip-1-1",
+                        "report_date": "2019-01-01",
+                        "repair_status": false
+                    }
+                ]
+        }
+
 #### empty house information
 ### request url
     /house/get_empty_house

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Carport Management</title>
+        <link rel="stylesheet" href="../static/css/bootstrap/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="page-header">
+                        <h1>Carport Management</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3>Carports</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="carports-view" class="col-md-12">
+
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+            
+            <div id="park-record-area" class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <div class="row">
+                            <div class="col-md-12">
+                                <h3>Park Recorder</h3>
+                            </div>
+                    </div>
+                    <form class="form-horizontal">
+                        <div class="form-group">
+                            <label class="control-label">Car ID</label>
+                            <div><input id="car-id" class="record-input" type="text" placeholder="enter car ID..." ></div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">Start Time</label>
+                            <div><input id="start-time" class="record-input" type="datetime-local" value="2019-01-01T00:00"></div>
+                        </div>
+                        <div class="form-group">
+                            <label class="control-label">End Time</label>
+                            <div><input id="end-time" class="record-input" type="datetime-local" value="2019-01-01T00:10"></div>
+                        </div>
+                        <div class="form-group">
+                            <div id="error-info"></div>
+                            <div><button type="button" class="btn btn-info btn-block" id="submit">Submit</button></div>
+                        </div>
+                    </form>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+            <div id="foot-blank"></div>
+        </div>
+        <script src="../static/js/jquery.min.js" type="text/javascript"></script>
+        <script src="../static/js/carport.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="../static/css/carport.css">
+    </body>
+</html>

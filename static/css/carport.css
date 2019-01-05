@@ -1,0 +1,30 @@
+.carport-block {
+    text-align: center;
+}
+.carport-block-usable {
+    cursor: pointer;
+}
+.carport-block-usable:hover {
+    background-color: gainsboro;
+}
+.carport-block-selected {
+    background-color: gainsboro;
+}
+.carport-block-unusable {
+    color: gainsboro;
+    cursor: not-allowed;
+}
+#park-record-area {
+    display: none;
+}
+#foot-blank {
+    height: 100px;
+}
+.record-input {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: solid;
+    border-width: 1px;
+    border-color: gainsboro;
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Money Management</title>
+        <link rel="stylesheet" href="../static/css/bootstrap/css/bootstrap.min.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="page-header">
+                        <h1>Money Management</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2"></div>
+                <div class="col-md-8">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <h3>Money Table</h3>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-4"></div>
+                        <div class="col-md-4">
+                            <form class="form-horizontal">
+                                <div class="form-group">
+                                    <label class="control-label">Query Month</label>
+                                    <div><input id="month-input" class="query-input" type="month" value="2019-01"></div>
+                                </div>
+                                <div class="form-group">
+                                    <div><button type="button" class="btn btn-info btn-block" id="query">Query</button></div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="col-md-4"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <table class="table table-striped">
+                                <thead>
+                                    <tr>
+                                        <th>Item</th>
+                                        <th>Amount</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="money_tbody">
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-2"></div>
+            </div>
+            <div id="foot-blank"></div>
+        </div>
+        <script src="../static/js/jquery.min.js" type="text/javascript"></script>
+        <script src="../static/js/money.js" type="text/javascript"></script>
+        <link rel="stylesheet" href="../static/css/money.css">
+    </body>
+</html>

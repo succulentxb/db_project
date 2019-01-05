@@ -1,0 +1,27 @@
+.record-input {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: solid;
+    border-width: 1px;
+    border-color: gainsboro;
+}
+.equip-block {
+    text-align: center;
+}
+.equip-block-usable {
+    cursor: pointer;
+}
+.equip-block-usable:hover {
+    background-color: gainsboro;
+}
+.equip-block-unusable {
+    cursor: not-allowed;
+    color: gainsboro;
+}
+.equip-block-selected {
+    background-color: gainsboro;
+}
+#repair-record-area {
+    display: none;
+}

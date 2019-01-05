@@ -1,0 +1,7 @@
+.manage-item {
+    text-align: center;
+    cursor: pointer;
+}
+.manage-item:hover {
+    background-color: darkgray;
+}
